@@ -19,8 +19,8 @@ Agent dynamics can either be:
 """
 
 import numpy as np
-from lib.simulation import FleetSimulation
-from lib.robot import Fleet, si_to_uni
+from simulation import FleetSimulation
+from robot import Fleet, si_to_uni
 import control_algo_potential
 #from lib.potential import Potential
 import matplotlib.pyplot as plt
