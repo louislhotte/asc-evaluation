@@ -4,7 +4,7 @@ from simulation import FleetSimulation
 from robot import Fleet, si_to_uni
 import control_algo_potential
 
-nbOfRobots = 8
+nbOfRobots = 16
 fleet = Fleet(nbOfRobots, dynamics='singleIntegrator2D')
 for i in range(nbOfRobots):
     fleet.robot[i].state = 20 * np.random.rand(2) - 10
@@ -24,7 +24,7 @@ for i in range(X.shape[0]):
         Z[i, j] = pot.value(np.array([[X[i, j], Y[i, j]]]))
 
 fig, ax = plt.subplots(figsize=(6, 5))
-cmap = plt.cm.magma
+cmap = plt.cm.BrBG
 contour = ax.contourf(X, Y, Z, levels=50, cmap=cmap)
 cbar = plt.colorbar(contour, ax=ax, label='Potential')
 ax.set_xlabel('x', fontsize=12)
